@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex Interativa</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pokédex Interativa</h1>
+            <p>Busque um Pokémon para ver seus detalhes</p>
+        </header>
+
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Digite o nome do Pokémon..."
+                autocomplete="off"
+            >
+            <button id="searchBtn">Buscar</button>
+        </div>
+
+        <div id="suggestions" class="suggestions"></div>
+
+        <div id="resultContainer" class="result-container">
+            <div id="result" class="result hidden">
+                <div class="pokemon-card">
+                    <div class="pokemon-image">
+                        <img id="pokemonImage" src="" alt="Pokémon">
+                    </div>
+                    
+                    <div class="pokemon-info">
+                        <div class="info-header">
+                            <h2 id="pokemonName"></h2>
+                            <div id="pokemonTypes" class="types"></div>
+                        </div>
+
+                        <p id="pokemonDescription" class="description"></p>
+
+                        <div class="pokemon-details">
+                            <div class="detail">
+                                <span class="label">Altura:</span>
+                                <span id="pokemonHeight" class="value"></span>
+                            </div>
+                            <div class="detail">
+                                <span class="label">Peso:</span>
+                                <span id="pokemonWeight" class="value"></span>
+                            </div>
+                        </div>
+
+                        <div class="stats">
+                            <h3>Estatísticas</h3>
+                            <div class="stats-grid">
+                                <div class="stat">
+                                    <span class="stat-name">HP</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" id="stat-hp"></div>
+                                    </div>
+                                    <span class="stat-value" id="stat-hp-value"></span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-name">Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" id="stat-ataque"></div>
+                                    </div>
+                                    <span class="stat-value" id="stat-ataque-value"></span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-name">Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" id="stat-defesa"></div>
+                                    </div>
+                                    <span class="stat-value" id="stat-defesa-value"></span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-name">Sp. Ataque</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" id="stat-sp_ataque"></div>
+                                    </div>
+                                    <span class="stat-value" id="stat-sp_ataque-value"></span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-name">Sp. Defesa</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" id="stat-sp_defesa"></div>
+                                    </div>
+                                    <span class="stat-value" id="stat-sp_defesa-value"></span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-name">Velocidade</span>
+                                    <div class="stat-bar">
+                                        <div class="stat-fill" id="stat-velocidade"></div>
+                                    </div>
+                                    <span class="stat-value" id="stat-velocidade-value"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="error" class="error hidden">
+                <p>Pokémon não encontrado. Tente outro nome!</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Pokédex criada com ❤️ | Dados dos Pokémons da PokeAPI</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
